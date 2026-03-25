@@ -4,8 +4,8 @@
   --cor-de-fundo: blue;
   --cor-texto-principal: green;
   --cor-texto-secundario: yellow;
-  --botao-inativo: 
-  --botao-ativo: 
+  --botao-inativo: #F45B26;
+  --botao-ativo: #D75656;
 
 
 }
@@ -14,4 +14,5 @@
 body{
     background: var(--cor-de-fundo);
     font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-texto-principal);
 }
