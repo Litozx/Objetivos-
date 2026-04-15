@@ -64,7 +64,7 @@ border-top: none;
    display:block;
 }
 .aba-conteudo{
-  display: nome;
+  display: none;
 }
 .abas-texto{
 background-color: var(--botao-inativo);
