@@ -71,6 +71,11 @@ background-color: var(--botao-inativo);
 padding: 40px;
 border-radius: 0 0 40px 40px;
 }
+.conteudo-titulo-secundario{
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  text-transform: uppercase;
+}
 .contador{
   display: flex;
   justify-content: center;
