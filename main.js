@@ -28,7 +28,7 @@ function calculaTempo(tempoObletivo){
     let tempoFinal = tempoObletivo - tempoAtual
     console.log(tempoFinal)
     let segundos = Math.floor(tempoFinal / 1000)
-    let minutos = Math.floor(secundos / 60)
+    let minutos = Math.floor(segundos / 60)
     let horas = Math.floor(minutos / 60)
     let dias = Math. floor(horas / 24)
 
