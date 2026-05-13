@@ -11,5 +11,41 @@ botoes[i].onclick = function (){
     }
     botoes[i].classList.add("ativo")
     textos[i].classList.add("ativo")
+
 }
 }
+
+const contadores = document.querySelectorAll(".contador")
+const tempoObletivo1 = new Date("2026-10-05T00:00:00")
+const tempoObletivo2 = new Date("2026-11-05T00:00:00")
+const tempoObletivo3 = new Date("2026-12-05T00:00:00")
+const tempoObletivo4 = new Date("2027-01-05T00:00:00")
+
+const tempos = [tempoObletivo1,tempoObletivo2,tempoObletivo3,tempoObletivo4]
+
+function calculaTempo(tempoObletivo){
+    let tempoAtual = new Date();
+    let tempoFinal = tempoObletivo - tempoAtual
+    console.log(tempoFinal)
+    let segundos = Math.floor(tempoFinal / 1000)
+    let minutos = Math.floor(secundos / 60)
+    let horas = Math.floor(minutos / 60)
+    let dias = Math. floor(horas / 24)
+
+    segundos %= 60
+    minutos %= 60
+    horas %= 24
+    if (tempoFinal > 0){
+        return [dias, horas, minutos, segundos]
+    }else{
+        return [0,0,0,0]
+    }
+}
+
+function atualizaCronometro(){
+    for(let i=0; i<contadores.length;i++){
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0]
+    }
+}
+
+    calculaTempo(tempoObletivo1)
