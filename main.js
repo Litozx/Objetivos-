@@ -45,7 +45,21 @@ function calculaTempo(tempoObletivo){
 function atualizaCronometro(){
     for(let i=0; i<contadores.length;i++){
         document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0]
-    }
-}
+        const [dias, horas, minutos, segundos] = calculaTempo(tempos[i])
+        const contador = contadores[i]
+        const numeros = contador.querySelectorAll(".contador-digito-numerico")
 
+        if(numeros.length >=0){
+            numeros[0].textContent = dias
+            numeros[1].textContent = horas
+            numeros[2].textContent = minutos
+            numeros[3].textContent = segundos
+        }
+    }   
+}
+function comecaCronometro(){
+    atualizaCronometro()
+    setInterval(atualizaCronometro, 1000)
+}
+comecaCronometro()
     calculaTempo(tempoObletivo1)
